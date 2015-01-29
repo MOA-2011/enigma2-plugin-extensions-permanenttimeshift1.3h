@@ -50,10 +50,10 @@ def localeInit():
 	environ["LANGUAGE"] = lang[:2]
 	gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 	gettext.textdomain("enigma2")
-	gettext.bindtextdomain("PermanentTimeshift1.3h", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PermanentTimeshift1.3h/locale/"))
+	gettext.bindtextdomain("PermanentTimeshift", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PermanentTimeshift/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("PermanentTimeshift1.3h", txt)
+	t = gettext.dgettext("PermanentTimeshift", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
@@ -105,65 +105,65 @@ from Components.Sources.Boolean import Boolean
 
 PTSIndicatorSkin = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts.png" position="0,0" size="48,48" alphatest="on">
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkinBlink = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts.png" position="0,0" size="48,48" alphatest="on">
 				<convert type="ConditionalShowHide">Blink</convert>
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkin1 = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts1.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts1.png" position="0,0" size="48,48" alphatest="on">
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkinBlink1 = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts1.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts1.png" position="0,0" size="48,48" alphatest="on">
 				<convert type="ConditionalShowHide">Blink</convert>
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkin2 = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts2.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts2.png" position="0,0" size="48,48" alphatest="on">
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkinBlink2 = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts2.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts2.png" position="0,0" size="48,48" alphatest="on">
 				<convert type="ConditionalShowHide">Blink</convert>
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkin3 = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts3.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts3.png" position="0,0" size="48,48" alphatest="on">
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkinBlink3 = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts3.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts3.png" position="0,0" size="48,48" alphatest="on">
 				<convert type="ConditionalShowHide">Blink</convert>
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkin4 = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts4.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts4.png" position="0,0" size="48,48" alphatest="on">
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
 
 PTSIndicatorSkinBlink4 = """
 		<screen name="PTSIndicator" title="Timeshift Indicator" flags="wfNoBorder" position="60,60" size="48,48" zPosition="%s" backgroundColor="transparent" >
-			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/icon/ts4.png" position="0,0" size="48,48" alphatest="on">
+			<widget source="Boolean" render="Pixmap" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/icon/ts4.png" position="0,0" size="48,48" alphatest="on">
 				<convert type="ConditionalShowHide">Blink</convert>
 			</widget>  
 		</screen>""" % (config.plugins.pts.z.value)
@@ -222,11 +222,11 @@ class PTSTimeshiftState(Screen):
 				<widget source="session.CurrentService" render="Label" zPosition="5" position="200,52" size="100,20" font="Regular;20" halign="center" foregroundColor="blue" backgroundColor="background" transparent="1">
 					<convert type="ServicePosition">Length</convert>
 				</widget>
-				<widget name="PTSSeekPointer" position="158,88" zPosition="3" size="19,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/now/timelines_new.png" alphatest="on" />
-				<ePixmap position="10,88" size="840,15" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/now/slider_back.png" alphatest="on"/>
-				<ePixmap position="0,0" size="100,106" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/now/pts_bar.png" alphatest="on"/>
-				<ePixmap position="100,40" size="200,38" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/now/button_grey200.png" alphatest="on"/>
-				<widget source="session.CurrentService" render="Progress" position="10,95" size="420,6" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/now/slider.png" transparent="1">
+				<widget name="PTSSeekPointer" position="158,88" zPosition="3" size="19,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/now/timelines_new.png" alphatest="on" />
+				<ePixmap position="10,88" size="840,15" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/now/slider_back.png" alphatest="on"/>
+				<ePixmap position="0,0" size="100,106" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/now/pts_bar.png" alphatest="on"/>
+				<ePixmap position="100,40" size="200,38" zPosition="0" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/now/button_grey200.png" alphatest="on"/>
+				<widget source="session.CurrentService" render="Progress" position="10,95" size="420,6" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/now/slider.png" transparent="1">
 					<convert type="ServicePosition">Position</convert>
 				</widget>
 				<widget name="eventname" position="0,122" zPosition="5" size="420,20" font="Regular;18" halign="center" foregroundColor="yellow" backgroundColor="#ff000000" />
@@ -241,9 +241,9 @@ class PTSTimeshiftState(Screen):
 				<widget source="session.CurrentService" render="Label" position="340,5" size="65,27" font="Regular;20" halign="left" foregroundColor="white" backgroundColor="transpBlack">
 					<convert type="ServicePosition">Length</convert>
 				</widget>
-				<widget name="PTSSeekPointer" position="8,30" zPosition="3" size="19,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/timeline-now.png" alphatest="on" />
-				<ePixmap position="10,33" size="840,15" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/slider_back.png" alphatest="on"/>
-				<widget source="session.CurrentService" render="Progress" position="10,33" size="390,15" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/images/slider.png" transparent="1">
+				<widget name="PTSSeekPointer" position="8,30" zPosition="3" size="19,50" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/timeline-now.png" alphatest="on" />
+				<ePixmap position="10,33" size="840,15" zPosition="1" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/slider_back.png" alphatest="on"/>
+				<widget source="session.CurrentService" render="Progress" position="10,33" size="390,15" zPosition="2" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/images/slider.png" transparent="1">
 					<convert type="ServicePosition">Position</convert>
 				</widget>
 				<widget name="eventname" position="10,49" zPosition="4" size="420,20" font="Regular;18" halign="center" backgroundColor="transpBlack" />
@@ -424,7 +424,7 @@ class InfoBar(InfoBarOrg):
 
 		# Init PTS Delay-Timer
 		self.pts_delay_timer = eTimer()
-		self.pts_delay_timer.callback.append(self.activatePermanentTimeshift1.3h)
+		self.pts_delay_timer.callback.append(self.activatePermanentTimeshift)
 
 		# Init PTS LengthCheck-Timer
 		self.pts_LengthCheck_timer = eTimer()
@@ -699,7 +699,7 @@ class InfoBar(InfoBarOrg):
 			if filename.startswith("timeshift.") and not filename.endswith(".sc") and not filename.endswith(".del") and not filename.endswith(".copy"):
 				self.eraseFile("%s/%s" % (config.usage.timeshift_path.value,filename))
 
-	def activatePermanentTimeshift1.3h(self):
+	def activatePermanentTimeshift(self):
 		if self.ptsCheckTimeshiftPath() is False or self.session.screen["Standby"].boolean is True or self.ptsLiveTVStatus() is False or (config.plugins.pts.stopwhilerecording.value and self.pts_record_running):
 			return
 
@@ -775,7 +775,7 @@ class InfoBar(InfoBarOrg):
 			self.seek_action = False
 			
 	def StartManualPTS(self):
-		self.activatePermanentTimeshift1.3h()
+		self.activatePermanentTimeshift()
 		
 	def selectOptions(self):
 		if config.plugins.pts.long_stop.value =="setup":
@@ -797,7 +797,7 @@ class InfoBar(InfoBarOrg):
 				if not self.wait_pts.isActive():
 					self.wait_pts.start(int(config.plugins.pts.manual_startdelay.value), True)
 			else:
-				self.activatePermanentTimeshift1.3h()
+				self.activatePermanentTimeshift()
 				self.activateTimeshiftEndAndPause()
 		else:
 			try:
@@ -910,7 +910,7 @@ class InfoBar(InfoBarOrg):
 			self.pts_LengthCheck_timer.stop()
 
 	def restartTimeshift(self):
-		self.activatePermanentTimeshift1.3h()
+		self.activatePermanentTimeshift()
 		Notifications.AddNotification(MessageBox, _("PTS-Plugin: Restarting Timeshift!"), MessageBox.TYPE_INFO, timeout=5)
 
 	def saveTimeshiftPopup(self):
@@ -1417,7 +1417,7 @@ class InfoBar(InfoBarOrg):
 				eventname = readmetafile.readline()[0:-1]
 			else:
 				eventname = ""
-			JobManager.AddJob(CreateAPSCFilesJob(self, "/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift1.3h/createapscfiles \"%s\"" % (filename), eventname))
+			JobManager.AddJob(CreateAPSCFilesJob(self, "/usr/lib/enigma2/python/Plugins/Extensions/PermanentTimeshift/createapscfiles \"%s\"" % (filename), eventname))
 		else:
 			self.ptsSaveTimeshiftFinished()
 
@@ -1740,7 +1740,7 @@ class InfoBar(InfoBarOrg):
 
 		# Restart Timeshift when all records stopped
 		if timer.state == TimerEntry.StateEnded and not self.timeshift_enabled and not self.pts_record_running:
-			self.activatePermanentTimeshift1.3h()
+			self.activatePermanentTimeshift()
 
 
 		# Restart Merge-Timer when all records stopped
@@ -1786,10 +1786,10 @@ class InfoBar(InfoBarOrg):
 		if config.plugins.pts.enabled.value and self.session.screen["Standby"].boolean is not True and self.timeshift_enabled and (time() - self.pts_starttime) >= (config.plugins.pts.maxlength.value * 60):
 			if self.save_current_timeshift:
 				self.saveTimeshiftActions("saveTimeshift")
-				self.activatePermanentTimeshift1.3h()
+				self.activatePermanentTimeshift()
 				self.save_current_timeshift = True
 			else:
-				self.activatePermanentTimeshift1.3h()
+				self.activatePermanentTimeshift()
 			Notifications.AddNotification(MessageBox,_("Maximum Timeshift length per Event reached!\nRestarting Timeshift now ..."), MessageBox.TYPE_INFO, timeout=5)
 
 	def SaveCurrentTimeshiftPTS(self):
